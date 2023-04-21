@@ -28,12 +28,11 @@
     "rootDir": "./",
     "baseUrl": "./",
     "paths": {
-      "common/*": ["src/common/*"]/* ,
-      /* "app/*": ["src/app/*"],
+      "common/*": ["src/common/*"],
+      "app/*": ["src/app/*"]/* ,
       "config/*": ["src/config/*"],
       "core/*": ["src/core/*"],
       "packages/*": ["src/packages/*"],
-      "pages/*": ["src/pages/*"],
       "public/*": ["public/*"] */
     }
   },

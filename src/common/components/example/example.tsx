@@ -1,11 +1,8 @@
-import './example.scss'
-
 const Example = () => (
   <div className="p-4">
-    <h1 className="text-4xl font-bold pb-4">Checklist</h1>
+    <h1 className="text-4xl font-bold pb-4">Example</h1>
     <ul>
-      <li>react-router</li>
-      <li>axe + eslint-plugin-jsx-a11y</li>
+      <li>Example component</li>
     </ul>
   </div>
 )

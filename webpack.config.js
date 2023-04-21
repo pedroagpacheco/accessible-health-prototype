@@ -8,13 +8,13 @@ module.exports = {
   entry: ['webpack/hot/dev-server', './src/index.tsx'],
   resolve: {
     alias: {
-      common: path.resolve(__dirname, 'src/common')/* ,
-      app: resolve('./src/app'),
+      root: path.resolve(__dirname, './'),
+      src: path.resolve(__dirname, 'src'),
+      common: path.resolve(__dirname, 'src/common'),
+      app: path.resolve(__dirname, 'src/app')/*,
       config: resolve('./src/config'),
       core: resolve('./src/core'),
       packages: resolve('./src/packages'),
-      pages: resolve('./src/pages'),
-      root: resolve('./'),
       public: resolve('./public') */
     },
     symlinks: false,
