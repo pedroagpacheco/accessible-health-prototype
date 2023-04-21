@@ -1,0 +1,5 @@
+/src/declarations/**
+/node_modules
+webpack.config.js
+tailwind.config.js
+postcss.config.js

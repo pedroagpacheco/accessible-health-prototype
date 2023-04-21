@@ -1,0 +1,42 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "types": [/* "jest", "@testing-library/jest-dom", */ "node"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "downlevelIteration": true,
+    "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "jsx": "react-jsx",
+    "importsNotUsedAsValues": "remove",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "common/*": ["src/common/*"]/* ,
+      /* "app/*": ["src/app/*"],
+      "config/*": ["src/config/*"],
+      "core/*": ["src/core/*"],
+      "packages/*": ["src/packages/*"],
+      "pages/*": ["src/pages/*"],
+      "public/*": ["public/*"] */
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
