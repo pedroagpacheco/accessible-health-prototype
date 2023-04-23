@@ -19,10 +19,7 @@ const Header = () => {
             aria-label="Aumentar fonte"
             onClick={() => {
               const root = getComputedStyle(document.documentElement)
-              //@ts-ignore-next-line
-              const oldpx = Number.parseInt(root.getPropertyValue('--font-size').replaceAll('px'))
-              
-              //@ts-ignore-next-line
+              const oldpx = Number.parseInt(root.getPropertyValue('--font-size').replaceAll('px', ''))
               document.documentElement.style.setProperty('--font-size', `${oldpx + 1  }px`)
             }}>
             <FontAwesomeIcon icon={faMagnifyingGlassPlus}/>
@@ -33,10 +30,7 @@ const Header = () => {
             aria-label="Diminuir fonte"
             onClick={() => {
               const root = getComputedStyle(document.documentElement)
-              //@ts-ignore-next-line
-              const oldpx = Number.parseInt(root.getPropertyValue('--font-size').replaceAll('px'))
-              
-              //@ts-ignore-next-line
+              const oldpx = Number.parseInt(root.getPropertyValue('--font-size').replaceAll('px', ''))
               document.documentElement.style.setProperty('--font-size', `${oldpx - 1  }px`)
             }}>
             <FontAwesomeIcon icon={faMagnifyingGlassMinus}/>
