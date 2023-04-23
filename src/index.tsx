@@ -11,6 +11,13 @@ import 'whatwg-fetch'
 
 import './style.scss'
 
+if (process.env.NODE_ENV !== 'production') {
+  const axe = require('@axe-core/react')
+  const React = require('react')
+  const ReactDOM = require('react-dom')
+  axe(React, ReactDOM, 1000)
+}
+
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const container = document.getElementById('app-root')!
 const root = createRoot(container)

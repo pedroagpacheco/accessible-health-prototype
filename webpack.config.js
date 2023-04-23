@@ -23,6 +23,7 @@ module.exports = {
   },
   output: {
     path: __dirname + '/dist/',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -42,7 +43,8 @@ module.exports = {
   },
   devtool: prod ? undefined : 'source-map',
   devServer: {
-    hot: true
+    hot: true,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

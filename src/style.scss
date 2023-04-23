@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-$text-color: white;
-$bg-color: black;
+$text-color: black;
+$bg-color: #F8F8F8;
+
+
+:root {
+  --font-size: 16px;
+  font-size:var(--font-size);
+}
 
 body {
   color: $text-color;

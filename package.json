@@ -6,20 +6,28 @@
   "author": "pedroagpacheco",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "core-js": "~3.30.0",
     "raf": "~3.4.1",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
+    "react-router-dom": "^6.10.0",
     "whatwg-fetch": "~3.6.2"
   },
   "devDependencies": {
+    "@axe-core/react": "^4.6.1",
     "@types/node": "~18.15.11",
+    "@types/react": "^18.0.38",
     "@typescript-eslint/eslint-plugin": "~5.58.0",
     "@typescript-eslint/parser": "~5.58.0",
     "autoprefixer": "~10.4.14",
     "css-loader": "~6.7.3",
     "eslint": "~8.38.0",
     "eslint-plugin-import": "~2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "~7.32.2",
     "eslint-plugin-react-hooks": "~4.6.0",
     "html-webpack-plugin": "~5.5.0",
@@ -38,6 +46,7 @@
   },
   "scripts": {
     "start": "webpack serve --progress --port 3000",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
   }
 }
