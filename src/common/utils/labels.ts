@@ -9,5 +9,6 @@ export const labels = {
   edu_card_description: 'Aqui você encontra informações sobre doenças, vacinas, medicamentos e muito mais. Tudo para você ficar por dentro do mundo da saúde.',
   increase_font: 'Aumentar fonte',
   decrease_font: 'Diminuir fonte',
-  reset_font: 'Redefinir fonte'
+  reset_font: 'Redefinir fonte',
+  delete_item: 'Excluir item'
 }
