@@ -5,6 +5,7 @@ import {
   faMagnifyingGlassMinus
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { labels } from 'common/utils/labels'
 
 enum FontSize {
   DEFAULT = 16,
@@ -36,27 +37,30 @@ const Header = () => {
       <div className="w-full max-w-5xl flex justify-between text-2xl">
         <h1 className="text-white font-bold">
           <FontAwesomeIcon icon={faPills} className="pr-2 text-red-400"/>
-          ConecteSaúde
+          {labels.app_title}
         </h1>
         <div>
           <button
             className="text-white hover:text-gray-200 pr-4"
-            title="Aumentar fonte"
-            aria-label="Aumentar fonte"
+            title={labels.increase_font}
+            aria-label={labels.increase_font}
+            tabIndex={0}
             onClick={() => handleFontSizeChange(FontSize.INCREASE)}>
             <FontAwesomeIcon icon={faMagnifyingGlassPlus}/>
           </button>
           <button
             className="text-white hover:text-gray-200 pr-4"
-            title="Redefinir fonte"
-            aria-label="Redefinir fonte"
+            title={labels.reset_font}
+            aria-label={labels.reset_font}
+            tabIndex={0}
             onClick={() => handleFontSizeChange(FontSize.RESET)}>
             <FontAwesomeIcon icon={faRotate}/>
           </button>
           <button
             className="text-white hover:text-gray-200"
-            title="Diminuir fonte"
-            aria-label="Diminuir fonte"
+            title={labels.decrease_font}
+            aria-label={labels.decrease_font}
+            tabIndex={0}
             onClick={() => handleFontSizeChange(FontSize.DECREASE)}>
             <FontAwesomeIcon icon={faMagnifyingGlassMinus}/>
           </button>
