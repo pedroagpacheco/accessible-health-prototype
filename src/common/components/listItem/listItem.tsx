@@ -27,7 +27,7 @@ const ListItem = ({
           )}
         </div>
       </div>
-      <div className="hidden sm:flex sm:flex-col sm:items-end">
+      <div className="flex flex-col items-end">
         <p className="text-sm leading-6 text-gray-900">{subtitle}</p>
         {onDelete && (
           <button
@@ -35,7 +35,7 @@ const ListItem = ({
             title={labels.delete_item}
             aria-label={labels.delete_item}
             tabIndex={0}
-            className="bg-blue-900 text-white w-6 rounded mt-2">
+            className="bg-blue-900 hover:bg-blue-950 text-white w-6 rounded mt-2">
             <FontAwesomeIcon icon={faTrash}/>
           </button>
         )}

@@ -10,5 +10,13 @@ export const labels = {
   increase_font: 'Aumentar fonte',
   decrease_font: 'Diminuir fonte',
   reset_font: 'Redefinir fonte',
-  delete_item: 'Excluir item'
+  delete_item: 'Excluir item',
+  medicines: 'Medicamentos',
+  add_medicine: 'Adicionar Medicamento',
+  vaccines: 'Vacinas',
+  add: 'Adicionar',
+  medicine_name: 'Medicamento:',
+  medicine_frequency: 'Frequência:',
+  medicine_frequency_placeholder: 'Ex: 2x por dia, 1x por semana...',
+  medicine_duration: 'Duração:'
 }

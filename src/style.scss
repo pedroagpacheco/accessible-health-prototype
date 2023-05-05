@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #EBEBEB;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    border-radius: 100vh;
+    border: 3px solid #BDBDBD;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #BDBDBD;
+  }
+}
+
 $text-color: black;
 $bg-color: #EBEBEB;
-
 
 :root {
   --font-size: 16px;

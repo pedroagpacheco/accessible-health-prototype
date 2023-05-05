@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import {
   faPills,
   faRotate,
@@ -17,6 +18,12 @@ enum FontSize {
 }
 
 const Header = () => {
+  const navigate = useNavigate()
+
+  const goToHome = () => {
+    navigate('/')
+  }
+
   const handleFontSizeChange = (type: FontSize) => {
     const root = getComputedStyle(document.documentElement)
     const oldpx = Number.parseInt(root.getPropertyValue('--font-size').replaceAll('px', ''))
@@ -35,10 +42,21 @@ const Header = () => {
   return (
     <div className="w-screen py-3 bg-blue-900 flex items-center justify-center">
       <div className="w-full max-w-5xl flex justify-between text-2xl">
-        <h1 className="text-white font-bold">
-          <FontAwesomeIcon icon={faPills} className="pr-2 text-red-400"/>
-          {labels.app_title}
-        </h1>
+        <button
+          className="hover:cursor-pointer"
+          role='link'
+          tabIndex={0}
+          onClick={() => goToHome()}
+          onKeyDown={event => {
+            if (event.key === 'Enter') {
+              goToHome()
+            }
+          }}>
+          <h1 className="text-white font-bold">
+            <FontAwesomeIcon icon={faPills} className="pr-2 text-red-400"/>
+            {labels.app_title}
+          </h1>
+        </button>
         <div>
           <button
             className="text-white hover:text-gray-200 pr-4"
