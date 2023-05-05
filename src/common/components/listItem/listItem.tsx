@@ -1,11 +1,13 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import classnames from 'classnames'
 import { labels } from 'common/utils/labels'
 
 interface Props {
   title: string,
   subtitle: string,
   description: string,
+  onClick?: () => void,
   onDelete?: () => void
 }
 
@@ -13,11 +15,27 @@ const ListItem = ({
   title,
   subtitle,
   description,
+  onClick,
   onDelete
 }: Props) => {
   return (
-    <li key={title} className="flex justify-between gap-x-6 py-5 w-96">
-      <div className="flex gap-x-4">
+    <li
+      key={title}
+      className={classnames('flex justify-between gap-x-6 py-5 w-96', {
+        'hover:cursor-pointer': onClick
+      })}>
+      <div
+        role='button'
+        onClick={() => onClick && onClick()}
+        onKeyDown={event => {
+          if (event.key === 'Enter') {
+            onClick && onClick()
+          }
+        }}
+        tabIndex={0}
+        className={classnames('flex gap-x-4', {
+          'hover:cursor-text': !onClick
+        })}>
         <div className="min-w-0 flex-auto">
           <p className="text-sm font-semibold leading-6 text-gray-900">{title}</p>
           {description && (

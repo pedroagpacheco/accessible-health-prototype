@@ -68,3 +68,57 @@ export const vaccines = [
     description: 'Última dose: 04/11/2020'
   }
 ]
+
+export const appointments = [
+  {
+    title: 'Dra. Ana Maria',
+    subtitle: 'Cardiologista',
+    description: 'Consulta agendada para 20/08/2023'
+  },
+  {
+    title: 'Dr. João Carlos',
+    subtitle: 'Dermatologista',
+    description: 'Consulta agendada para 16/04/2023'
+  }
+]
+
+export const specialties = [
+  `Clínica Geral`,
+  `Alergia e Imunologia`,
+  `Anestesiologia`,
+  `Angiologia`,
+  `Oncologia`,
+  `Cardiologia`,
+  `Fisioterapia`,
+  `Gastrenterologia`,
+  `Pediatria`,
+  `Cirurgia Plástica`
+]
+
+export const exams = [
+  {
+    title: 'Hemograma',
+    subtitle: 'Resultado: 20/02/2023',
+    description: '+ Ver detalhes'
+  },
+  {
+    title: 'Ultrassonografia',
+    subtitle: 'Resultado: 16/04/2022',
+    description: '+ Ver detalhes'
+  },
+  {
+    title: 'Ressonância Magnética',
+    subtitle: 'Resultado: 12/08/2020',
+    description: '+ Ver detalhes'
+  },
+  {
+    title: 'Tomografia Computadorizada',
+    subtitle: 'Resultado: 06/05/2020',
+    description: '+ Ver detalhes'
+  },
+  {
+    title: 'Eletrocardiograma',
+    subtitle: 'Resultado: 20/09/2018',
+    description: '+ Ver detalhes'
+  }
+]

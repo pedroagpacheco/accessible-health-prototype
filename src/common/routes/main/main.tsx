@@ -25,7 +25,8 @@ const Main = () => {
         <Card
           title={labels.exams_card}
           description={labels.exams_card_description}
-          icon={faStethoscope}/>
+          icon={faStethoscope}
+          onClick={() => handleCardClick('exams')}/>
         <Card
           title={labels.edu_card}
           description={labels.edu_card_description}

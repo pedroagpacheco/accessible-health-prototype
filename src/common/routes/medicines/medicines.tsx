@@ -127,7 +127,7 @@ const Medicines = () => {
               <div className="md:w-2/3">
                 <input
                   className={`bg-gray-200 appearance-none border-2 border-gray-200
-                    py-2 px-4 text-gray-700 leading-tight focus:outline-none rounded w-full
+                    py-2 px-4 text-gray-700 leading-tight focus:outline-none rounded-lg w-full
                     focus:bg-white focus:border-purple-500`}
                   id="medicineName"
                   type="text"/>
@@ -144,7 +144,7 @@ const Medicines = () => {
               <div className="md:w-2/3">
                 <input
                   className={`bg-gray-200 appearance-none border-2 border-gray-200
-                    py-2 px-4 text-gray-700 leading-tight focus:outline-none rounded w-full
+                    py-2 px-4 text-gray-700 leading-tight focus:outline-none rounded-lg w-full
                     focus:bg-white focus:border-purple-500`}
                   placeholder={labels.medicine_frequency_placeholder}
                   id="medicineFrequency"
@@ -162,7 +162,7 @@ const Medicines = () => {
               <div className="md:w-2/3">
                 <input
                   className={`bg-gray-200 appearance-none border-2 border-gray-200
-                    py-2 px-4 text-gray-700 leading-tight focus:outline-none rounded w-full
+                    py-2 px-4 text-gray-700 leading-tight focus:outline-none rounded-lg w-full
                     focus:bg-white focus:border-purple-500`}
                   id="medicineDuration"
                   type="text"/>

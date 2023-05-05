@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Main } from 'common/routes/main'
+import { Exams } from 'common/routes/exams'
 import { Example } from 'common/components/example'
 import { Medicines } from 'common/routes/medicines'
 
@@ -16,6 +17,10 @@ const App = () => {
     {
       path: 'medicines',
       element: <Medicines />
+    },
+    {
+      path: 'exams',
+      element: <Exams />
     }
   ])
 
