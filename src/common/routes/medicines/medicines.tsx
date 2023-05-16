@@ -23,7 +23,7 @@ const Medicines = () => {
     setMedicineList(medicineList.filter((_, i) => i !== index))
   }
 
-  const handleAddMedicine = (event) => {
+  const handleAddMedicine = event => {
     event.preventDefault()
 
     const medicineName = event.target.medicineName.value
@@ -164,6 +164,7 @@ const Medicines = () => {
                   className={`bg-gray-200 appearance-none border-2 border-gray-200
                     py-2 px-4 text-gray-700 leading-tight focus:outline-none rounded-lg w-full
                     focus:bg-white focus:border-gray-700`}
+                  placeholder={labels.medicine_duration_placeholder}
                   id="medicineDuration"
                   type="text"/>
               </div>

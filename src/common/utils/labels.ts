@@ -19,6 +19,7 @@ export const labels = {
   medicine_frequency: 'Frequência:',
   medicine_frequency_placeholder: 'Ex: 2x por dia, 1x por semana...',
   medicine_duration: 'Duração:',
+  medicine_duration_placeholder: 'Ex: Até 30/12/2021, Uso contínuo...',
   exam_results: 'Resultados de Exames',
   scheduled_appointment: 'Consultas Agendadas',
   schedule_appointment: 'Agendar Consulta',
