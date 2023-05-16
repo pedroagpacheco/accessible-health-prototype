@@ -19,10 +19,12 @@ const ListItem = ({
   onDelete
 }: Props) => {
   return (
-    <li key={title}>
+    <li key={title} className='grid'>
       <div
-        className={classnames('flex justify-between gap-x-6 py-5 w-96', {
-          'hover:cursor-pointer': onClick
+        className={classnames('flex justify-between gap-x-6 w-96', {
+          'hover:cursor-pointer': onClick,
+          'py-5': !onDelete,
+          'pt-5': onDelete
         })}
         role='button'
         onClick={() => onClick && onClick()}
@@ -38,27 +40,27 @@ const ListItem = ({
           })}>
           <div className="min-w-0 flex-auto">
             <p className="text-sm font-semibold leading-6 text-gray-900">{title}</p>
-            {description && (
-              <p className="mt-2 text-xs leading-5 text-gray-700">
-                {description}
-              </p>
-            )}
           </div>
         </div>
         <div className="flex flex-col items-end">
           <p className="text-sm leading-6 text-gray-900">{subtitle}</p>
-          {onDelete && (
-            <button
-              onClick={onDelete}
-              title={labels.delete_item}
-              aria-label={labels.delete_item}
-              tabIndex={0}
-              className="bg-blue-900 hover:bg-blue-950 text-white w-6 rounded mt-2">
-              <FontAwesomeIcon icon={faTrash}/>
-            </button>
+          {description && (
+            <p className="mt-2 text-xs leading-5 text-gray-700">
+              {description}
+            </p>
           )}
         </div>
       </div>
+      {onDelete && (
+        <button
+          onClick={onDelete}
+          title={labels.delete_item}
+          aria-label={labels.delete_item}
+          tabIndex={0}
+          className="bg-blue-900 hover:bg-blue-950 text-white w-6 rounded mb-2 ml-2 -mt-5">
+          <FontAwesomeIcon icon={faTrash} aria-hidden="true"/>
+        </button>
+      )}
     </li>
   )
 }
