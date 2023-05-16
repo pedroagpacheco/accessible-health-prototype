@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Edu } from 'common/routes/edu'
 import { Main } from 'common/routes/main'
 import { Exams } from 'common/routes/exams'
 import { Example } from 'common/components/example'
@@ -21,6 +22,10 @@ const App = () => {
     {
       path: 'exams',
       element: <Exams />
+    },
+    {
+      path: 'edu',
+      element: <Edu />
     }
   ])
 

@@ -30,7 +30,8 @@ const Main = () => {
         <Card
           title={labels.edu_card}
           description={labels.edu_card_description}
-          icon={faHospital}/>
+          icon={faHospital}
+          onClick={() => handleCardClick('edu')}/>
       </div>
     </div>
   )
