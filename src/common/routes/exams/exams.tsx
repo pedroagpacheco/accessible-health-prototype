@@ -24,7 +24,18 @@ import './exams.scss'
 const Exams = () => {
   const [appointmentList, setAppointmentList] = useState(appointments)
   const [openAppointmentModal, setOpenAppointmentModal] = useState(false)
+  const [openDeleteAppointmentModal, setOpenDeleteAppointmentModal] = useState(false)
   const [openDownloadModal, setOpenDownloadModal] = useState(false)
+  const [deleteAppointmentIndex, setDeleteAppointmentIndex] = useState(0)
+
+  const deleteAppointment = (index: number) => {
+    setAppointmentList(appointmentList.filter((_, i) => i !== index))
+  }
+
+  const handleDeleteAppointment = () => {
+    deleteAppointment(deleteAppointmentIndex)
+    setOpenDeleteAppointmentModal(false)
+  }
 
   const handleAddAppointment = event => {
     event.preventDefault()
@@ -94,12 +105,16 @@ const Exams = () => {
             id='scheduled-appointment-panel'>
             <ul className={`divide-y divide-gray-400 w-full
             overflow-y-auto mr-3 list-container scrollbar`}>
-              {appointmentList.map(appointment => (
+              {appointmentList.map((appointment, index) => (
                 <ListItem
                   key={appointment.title}
                   title={appointment.title}
                   subtitle={appointment.subtitle}
-                  description={appointment.description}/>
+                  description={appointment.description}
+                  onDelete={() => {
+                    setDeleteAppointmentIndex(index)
+                    setOpenDeleteAppointmentModal(true)
+                  }}/>
               ))}
             </ul>
             <button
@@ -187,6 +202,34 @@ const Exams = () => {
           onClick={() => setOpenDownloadModal(false)}>
             {labels.close}
           </button>
+        </div>
+      </Modal>
+      <Modal
+        open={openDeleteAppointmentModal}
+        onClose={() => setOpenDeleteAppointmentModal(false)}
+        slots={{ backdrop: Backdrop }}
+        className='modal-container'>
+        <div className="w-full max-w-lg bg-gray-100 p-9 flex flex-col items-center">
+          <h1 className="font-semibold mb-8 text-xl">
+            {labels.delete_appointment}
+          </h1>
+          <div className="mb-8">
+            {labels.delete_appointment_message}
+          </div>
+          <div className="flex flex-row w-full justify-between px-10">
+            <button className={`shadow bg-green-500 hover:bg-green-600 focus:shadow-outline
+              focus:outline-none text-white py-2 px-4 rounded`}
+            type="button"
+            onClick={() => handleDeleteAppointment()}>
+              {labels.confirm}
+            </button>
+            <button className={`shadow bg-red-500 hover:bg-red-600 focus:shadow-outline
+              focus:outline-none text-white py-2 px-4 rounded`}
+            type="button"
+            onClick={() => setOpenDeleteAppointmentModal(false)}>
+              {labels.cancel}
+            </button>
+          </div>
         </div>
       </Modal>
     </div>

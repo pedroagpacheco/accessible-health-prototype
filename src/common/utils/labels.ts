@@ -24,8 +24,12 @@ export const labels = {
   exam_result_downloaded: 'Resultado de exame baixado com sucesso!',
   scheduled_appointment: 'Consultas Agendadas',
   schedule_appointment: 'Agendar Consulta',
+  delete_appointment: 'Desmarcar Consulta',
+  delete_appointment_message: 'Tem certeza que deseja desmarcar a consulta?',
   schedule: 'Agendar',
   specialty: 'Especialidade:',
   date: 'Data:',
-  close: 'Fechar'
+  close: 'Fechar',
+  confirm: 'Sim',
+  cancel: 'Não'
 }
