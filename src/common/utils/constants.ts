@@ -71,7 +71,7 @@ export const vaccines = [
 
 export const appointments = [
   {
-    title: 'Dra. Ana Maria',
+    title: 'Dr. Ana Maria',
     subtitle: 'Cardiologista',
     description: 'Consulta agendada para 20/08/2023'
   },
@@ -90,7 +90,7 @@ export const specialties = [
   `Oncologia`,
   `Cardiologia`,
   `Fisioterapia`,
-  `Gastrenterologia`,
+  `Gastroenterologia`,
   `Pediatria`,
   `Cirurgia Plástica`
 ]
@@ -99,26 +99,26 @@ export const exams = [
   {
     title: 'Hemograma',
     subtitle: 'Resultado: 20/02/2023',
-    description: '+ Ver detalhes'
+    description: '+ Baixar resultado'
   },
   {
     title: 'Ultrassonografia',
     subtitle: 'Resultado: 16/04/2022',
-    description: '+ Ver detalhes'
+    description: '+ Baixar resultado'
   },
   {
     title: 'Ressonância Magnética',
     subtitle: 'Resultado: 12/08/2020',
-    description: '+ Ver detalhes'
+    description: '+ Baixar resultado'
   },
   {
     title: 'Tomografia Computadorizada',
     subtitle: 'Resultado: 06/05/2020',
-    description: '+ Ver detalhes'
+    description: '+ Baixar resultado'
   },
   {
     title: 'Eletrocardiograma',
     subtitle: 'Resultado: 20/09/2018',
-    description: '+ Ver detalhes'
+    description: '+ Baixar resultado'
   }
 ]

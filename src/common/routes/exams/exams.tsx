@@ -7,7 +7,9 @@ import {
   TabPanel,
   Modal
 } from '@mui/base'
+import Chance from 'chance'
 import classnames from 'classnames'
+import InputMask from 'react-input-mask'
 import {
   exams,
   appointments,
@@ -22,19 +24,21 @@ import './exams.scss'
 const Exams = () => {
   const [appointmentList, setAppointmentList] = useState(appointments)
   const [openAppointmentModal, setOpenAppointmentModal] = useState(false)
+  const [openDownloadModal, setOpenDownloadModal] = useState(false)
 
-  const handleAddAppointment = (event) => {
+  const handleAddAppointment = event => {
     event.preventDefault()
 
-    const medicineName = event.target.medicineName.value
-    const medicineFrequency = event.target.medicineFrequency.value
-    const medicineDuration = event.target.medicineDuration.value
+    const chance = new Chance()
+    const appointmentDoctor = `Dr. ${chance.name({ nationality: 'it' })}`
+    const appointmentSpecialty = event.target.appointmentSpecialty.value
+    const appointmentDate = event.target.appointmentDate.value
 
     setAppointmentList(prevAppointmentList => {
       return [...prevAppointmentList, {
-        title: medicineName,
-        subtitle: medicineFrequency,
-        description: medicineDuration
+        title: appointmentDoctor,
+        subtitle: appointmentSpecialty,
+        description: `Consulta agendada para ${appointmentDate}`
       }]
     })
 
@@ -82,7 +86,7 @@ const Exams = () => {
                   title={exams.title}
                   subtitle={exams.subtitle}
                   description={exams.description}
-                  onClick={() => console.log('crazy an alert in 2023')}/>
+                  onClick={() => setOpenDownloadModal(true)}/>
               ))}
             </ul>
           </TabPanel>
@@ -146,12 +150,13 @@ const Exams = () => {
                 </label>
               </div>
               <div className="md:w-2/3">
-                <input
+                <InputMask
                   className={`bg-gray-200 appearance-none border-2 border-gray-200
                     py-2 px-4 text-gray-700 leading-tight focus:outline-none w-full
                     focus:bg-white rounded-lg`}
                   id="appointmentDate"
-                  type="text"/>
+                  mask="99/99/9999"
+                  alwaysShowMask />
               </div>
             </div>
             <div className="md:flex md:items-center">
@@ -166,6 +171,23 @@ const Exams = () => {
             </div>
           </main>
         </form>
+      </Modal>
+      <Modal
+        open={openDownloadModal}
+        onClose={() => setOpenDownloadModal(false)}
+        slots={{ backdrop: Backdrop }}
+        className='modal-container'>
+        <div className="w-full max-w-lg bg-gray-100 p-9 flex flex-col items-center">
+          <h1 className="font-semibold mb-8 text-xl">
+            {labels.exam_result_downloaded}
+          </h1>
+          <button className={`shadow bg-blue-900 hover:bg-blue-950 focus:shadow-outline
+            focus:outline-none text-white py-2 px-4 rounded`}
+          type="button"
+          onClick={() => setOpenDownloadModal(false)}>
+            {labels.close}
+          </button>
+        </div>
       </Modal>
     </div>
   )

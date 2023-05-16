@@ -21,9 +21,11 @@ export const labels = {
   medicine_duration: 'Duração:',
   medicine_duration_placeholder: 'Ex: Até 30/12/2021, Uso contínuo...',
   exam_results: 'Resultados de Exames',
+  exam_result_downloaded: 'Resultado de exame baixado com sucesso!',
   scheduled_appointment: 'Consultas Agendadas',
   schedule_appointment: 'Agendar Consulta',
   schedule: 'Agendar',
   specialty: 'Especialidade:',
-  date: 'Data:'
+  date: 'Data:',
+  close: 'Fechar'
 }
