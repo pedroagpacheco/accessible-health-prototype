@@ -3,5 +3,7 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {},
-  plugins: []
+  plugins: [
+    require('flowbite-typography')
+  ]
 }
