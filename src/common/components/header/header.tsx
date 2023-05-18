@@ -10,7 +10,7 @@ import { labels } from 'common/utils/labels'
 
 enum FontSize {
   DEFAULT = 16,
-  MAX = 28,
+  MAX = 26,
   MIN = 12,
   INCREASE = 'plus',
   DECREASE = 'minus',

@@ -73,7 +73,8 @@ const Exams = () => {
   return (
     <div className="w-screen h-screen">
       <Header />
-      <div className="w-full h-full max-w-5xl m-auto flex justify-center items-center page-height-container">
+      <div className={`w-full h-full max-w-5xl m-auto flex
+        justify-center items-center overflow-y-auto page-height-container`}>
         <Tabs aria-label='Tab Section' defaultValue={0}>
           <TabsList className="w-full max-w-5xl">
             <Tab
