@@ -81,7 +81,7 @@ const Edu = () => {
             desse grupo e o Ministério da Saúde distribuiu cerca de 19 milhões de doses de vacinas Covid-19
             para todos os estados e o Distrito Federal.
           </p>
-          <p>
+          <p className='pb-8'>
             Em seguida, conforme o avanço da campanha e o cronograma de entrega de doses, outros grupos serão
             vacinados, como as pessoas entre 60 e 69 anos, as pessoas com deficiência permanente, os
             trabalhadores da saúde, gestantes e puérperas e a população privada de liberdade. Esses grupos
