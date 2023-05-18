@@ -91,7 +91,7 @@ const Exams = () => {
           <TabPanel
             id='exam-results-panel'>
             <ul className={`divide-y divide-gray-400 w-full
-            overflow-y-auto mr-3 mb-9 list-container scrollbar`}>
+            overflow-y-auto mr-3 mt-3 list-container scrollbar`}>
               {exams.map((exams) => (
                 <ListItem
                   key={exams.title}
@@ -105,7 +105,7 @@ const Exams = () => {
           <TabPanel
             id='scheduled-appointment-panel'>
             <ul className={`divide-y divide-gray-400 w-full
-            overflow-y-auto mr-3 list-container scrollbar`}>
+            overflow-y-auto mr-3 mt-3 list-container scrollbar`}>
               {appointmentList.map((appointment, index) => (
                 <ListItem
                   key={appointment.title}
@@ -119,7 +119,7 @@ const Exams = () => {
               ))}
             </ul>
             <button
-              className="bg-blue-900 hover:bg-blue-950 text-white p-2 rounded w-full"
+              className="bg-blue-900 hover:bg-blue-950 text-white p-2 rounded w-full mt-6"
               onClick={() => setOpenAppointmentModal(true)}>
               {labels.schedule_appointment}
             </button>

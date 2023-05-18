@@ -76,7 +76,7 @@ const Medicines = () => {
           <TabPanel
             id='medicine-panel'>
             <ul className={`divide-y divide-gray-400 w-full
-            overflow-y-auto mr-3 list-container scrollbar`}>
+            overflow-y-auto mr-3 list-container scrollbar mt-3`}>
               {medicineList.map((medicine, index) => (
                 <ListItem
                   key={medicine.title}
@@ -87,7 +87,7 @@ const Medicines = () => {
               ))}
             </ul>
             <button
-              className="bg-blue-900 hover:bg-blue-950 text-white p-2 rounded w-full"
+              className="bg-blue-900 hover:bg-blue-950 text-white p-2 rounded w-full mt-6"
               onClick={() => setOpenMedicineModal(true)}>
               {labels.add_medicine}
             </button>
@@ -95,7 +95,7 @@ const Medicines = () => {
           <TabPanel
             id='vaccine-panel'>
             <ul className={`divide-y divide-gray-400 w-full
-            overflow-y-auto mr-3 mb-9 list-container scrollbar`}>
+            overflow-y-auto mr-3 list-container scrollbar mt-3`}>
               {vaccines.map(vaccine => (
                 <ListItem
                   key={vaccine.title}
