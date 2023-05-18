@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: prod ? 'production' : 'development',
-  entry: ['webpack/hot/dev-server', './src/index.tsx'],
+  entry: './src/index.tsx',
   resolve: {
     alias: {
       root: path.resolve(__dirname, './'),
@@ -22,8 +22,9 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
   },
   output: {
-    path: __dirname + '/dist/',
-    publicPath: '/'
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -45,10 +46,11 @@ module.exports = {
   devServer: {
     hot: true,
     historyApiFallback: true,
+    contentBase: "./build",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: path.resolve('./index.html'),
     })
   ],
 }
