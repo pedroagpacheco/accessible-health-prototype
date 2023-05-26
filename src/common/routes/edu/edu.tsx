@@ -12,6 +12,7 @@ const Edu = () => {
       </div>
       <div className="w-full h-full max-w-5xl m-auto page-height-container px-4 md:px-0 pt-14">
         <Article title="É falso que as vacinas contra a gripe causam câncer ou outras doenças">
+          <span className='text-sm'>Publicado em 11/05/2023 por Ministério da Saúde</span>
           <p>
             Alguns sites e perfis de redes sociais investem exaustivamente em falas mentirosas que trazem
             desinformação sobre as vacinas. Um dos vídeos que circulam na internet diz que os imunizantes
@@ -38,6 +39,7 @@ const Edu = () => {
         </Article>
 
         <Article title="Entenda o comportamento do mosquito vetor da malária e saiba como se proteger">
+          <span className='text-sm'>Publicado em 02/05/2023 por Ministério da Saúde</span>
           <p>
             Típica de países subtropicais e tropicais, como é o caso do Brasil, a malária é causada por
             protozoários do gênero Plasmodium transmitidos pela picada da fêmea infectada do mosquito do
@@ -67,6 +69,7 @@ const Edu = () => {
         </Article>
 
         <Article title="Ministério da Saúde lança Movimento Nacional pela Vacinação">
+          <span className='text-sm'>Publicado em 27/02/2023 por Ministério da Saúde</span>
           <p>
             O Ministério da Saúde lança, nesta segunda-feira (27/02), o Movimento Nacional pela Vacinação com o 
             objetivo de retomar as altas coberturas vacinais do Brasil. Com a mensagem “Vacina é vida. Vacina 
