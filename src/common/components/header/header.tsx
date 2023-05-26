@@ -40,7 +40,7 @@ const Header = () => {
   }
 
   return (
-    <div className="w-screen py-3 bg-blue-900 flex items-center justify-center">
+    <div className="w-screen py-3 bg-blue-900 flex items-center justify-center px-4 md:px-0">
       <div className="w-full max-w-5xl flex justify-between text-2xl">
         <button
           className="hover:cursor-pointer"

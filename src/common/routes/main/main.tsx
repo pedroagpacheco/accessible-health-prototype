@@ -16,7 +16,8 @@ const Main = () => {
   return (
     <div className="w-screen h-screen">
       <Header />
-      <div className="w-full h-full max-w-5xl m-auto flex justify-center items-center page-height-container">
+      <div className={`w-full h-full max-w-5xl m-auto flex flex-col md:flex-row
+        justify-center items-center page-height-container`}>
         <Card
           title={labels.vaccine_card}
           description={labels.vaccine_card_description}
