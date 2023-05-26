@@ -4,9 +4,16 @@ export const Tab = ({ children, activeTab, currentTab, setActiveTab }) => {
   return (
     <div
       className={`px-5 py-3 rounded cursor-pointer
-    ${activeTab === currentTab ? 'bg-white' : 'bg-pink-400 text-white'}`}
-      onClick={() => setActiveTab(currentTab)}>
-      {children}
+      ${activeTab === currentTab ? 'bg-white' : 'bg-pink-400 text-white'}`}>
+      <button
+        onClick={() => setActiveTab(currentTab)}
+        onKeyDown={event => {
+          if (event.key === 'Enter') {
+            setActiveTab(currentTab)
+          }
+        }}>
+        {children}
+      </button>
     </div>
   )
 }
