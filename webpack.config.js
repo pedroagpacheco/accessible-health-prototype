@@ -40,6 +40,13 @@ module.exports = {
         test: /\.(s*)css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i, 
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
+      }
     ]
   },
   devtool: prod ? undefined : 'source-map',

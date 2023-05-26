@@ -12,17 +12,20 @@ import { labels } from 'common/utils/labels'
 import { Header } from 'common/components/header'
 import { ListItem } from 'common/components/listItem'
 import { medicines, vaccines } from 'common/utils/constants'
+import QRCode from 'common/images/qr-google-com.svg'
 
 import './medicines.scss'
 
 const Medicines = () => {
   const [medicineList, setMedicineList] = useState(medicines)
   const [openMedicineModal, setOpenMedicineModal] = useState(false)
+  const [openVaccineModal, setOpenVaccineModal] = useState(false)
+  const [selectedVaccine, setSelectedVaccine] = useState<Record<string, string>>({})
 
   const deleteMedicine = (index: number) => {
     setMedicineList(medicineList.filter((_, i) => i !== index))
   }
-
+  
   const handleAddMedicine = event => {
     event.preventDefault()
 
@@ -101,7 +104,11 @@ const Medicines = () => {
                   key={vaccine.title}
                   title={vaccine.title}
                   subtitle={vaccine.subtitle}
-                  description={vaccine.description}/>
+                  description={vaccine.description}
+                  onClick={() => {
+                    setSelectedVaccine(vaccine)
+                    setOpenVaccineModal(true)
+                  }}/>
               ))}
             </ul>
           </TabPanel>
@@ -182,6 +189,27 @@ const Medicines = () => {
             </div>
           </main>
         </form>
+      </Modal>
+      <Modal
+        open={openVaccineModal}
+        onClose={() => setOpenVaccineModal(false)}
+        slots={{ backdrop: Backdrop }}
+        className='modal-container'>
+        <div className="w-full max-w-lg bg-gray-100 p-9 flex flex-col items-center">
+          <h1 className="font-semibold mb-8 text-xl">
+            {selectedVaccine.title}
+          </h1>
+          <img src={QRCode} alt='Vaccine QR Code' />
+          <p className="text-center my-8">
+            {`${selectedVaccine.description} • ${selectedVaccine.subtitle}`}
+          </p>
+          <button className={`shadow bg-blue-900 hover:bg-blue-950 focus:shadow-outline
+            focus:outline-none text-white py-2 px-4 rounded`}
+          type="button"
+          onClick={() => setOpenVaccineModal(false)}>
+            {labels.close}
+          </button>
+        </div>
       </Modal>
     </div>
   )
