@@ -132,9 +132,9 @@ const Exams = () => {
         slots={{ backdrop: Backdrop }}
         className='modal-container'>
         <form className="w-full max-w-lg bg-gray-100 p-9" onSubmit={handleAddAppointment}>
-          <h1 className="text-2xl mb-12" role="complementary">
+          <div className="text-2xl mb-12" role="contentinfo">
             {labels.schedule_appointment}
-          </h1>
+          </div>
           <main>
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
@@ -194,9 +194,9 @@ const Exams = () => {
         slots={{ backdrop: Backdrop }}
         className='modal-container'>
         <div className="w-full max-w-lg bg-gray-100 p-9 flex flex-col items-center">
-          <h1 className="font-semibold mb-8 text-xl">
+          <div className="font-semibold mb-8 text-xl" role="contentinfo">
             {labels.exam_result_downloaded}
-          </h1>
+          </div>
           <button className={`shadow bg-blue-900 hover:bg-blue-950 focus:shadow-outline
             focus:outline-none text-white py-2 px-4 rounded`}
           type="button"
@@ -211,20 +211,20 @@ const Exams = () => {
         slots={{ backdrop: Backdrop }}
         className='modal-container'>
         <div className="w-full max-w-lg bg-gray-100 p-9 flex flex-col items-center">
-          <h1 className="font-semibold mb-8 text-xl">
+          <div className="font-semibold mb-8 text-xl" role="contentinfo">
             {labels.delete_appointment}
-          </h1>
-          <div className="mb-8">
+          </div>
+          <div className="mb-8" role="complementary">
             {labels.delete_appointment_message}
           </div>
           <div className="flex flex-row w-full justify-between px-10">
-            <button className={`shadow bg-green-500 hover:bg-green-600 focus:shadow-outline
+            <button className={`shadow bg-green-700 hover:bg-green-800 focus:shadow-outline
               focus:outline-none text-white py-2 px-4 rounded`}
             type="button"
             onClick={() => handleDeleteAppointment()}>
               {labels.confirm}
             </button>
-            <button className={`shadow bg-red-500 hover:bg-red-600 focus:shadow-outline
+            <button className={`shadow bg-red-700 hover:bg-red-800 focus:shadow-outline
               focus:outline-none text-white py-2 px-4 rounded`}
             type="button"
             onClick={() => setOpenDeleteAppointmentModal(false)}>

@@ -120,9 +120,9 @@ const Medicines = () => {
         slots={{ backdrop: Backdrop }}
         className='modal-container'>
         <form className="w-full max-w-lg bg-gray-100 p-9" onSubmit={handleAddMedicine}>
-          <h1 className="text-2xl mb-12" role="complementary">
+          <div className="text-2xl mb-12" role="contentinfo">
             {labels.add_medicine}
-          </h1>
+          </div>
           <main>
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
@@ -195,7 +195,7 @@ const Medicines = () => {
         onClose={() => setOpenVaccineModal(false)}
         slots={{ backdrop: Backdrop }}
         className='modal-container'>
-        <div className="w-full max-w-lg bg-gray-100 p-9 flex flex-col items-center">
+        <div className="w-full max-w-lg bg-gray-100 p-9 flex flex-col items-center" role="contentinfo">
           <h1 className="font-semibold mb-8 text-xl">
             {selectedVaccine.title}
           </h1>
