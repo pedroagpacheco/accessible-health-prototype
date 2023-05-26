@@ -29,11 +29,7 @@
     "baseUrl": "./",
     "paths": {
       "common/*": ["src/common/*"],
-      "app/*": ["src/app/*"]/* ,
-      "config/*": ["src/config/*"],
-      "core/*": ["src/core/*"],
-      "packages/*": ["src/packages/*"],
-      "public/*": ["public/*"] */
+      "app/*": ["src/app/*"]
     }
   },
   "include": ["src", "index.d.ts"],

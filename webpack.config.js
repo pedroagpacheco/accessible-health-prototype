@@ -11,11 +11,7 @@ module.exports = {
       root: path.resolve(__dirname, './'),
       src: path.resolve(__dirname, 'src'),
       common: path.resolve(__dirname, 'src/common'),
-      app: path.resolve(__dirname, 'src/app')/*,
-      config: resolve('./src/config'),
-      core: resolve('./src/core'),
-      packages: resolve('./src/packages'),
-      public: resolve('./public') */
+      app: path.resolve(__dirname, 'src/app')
     },
     symlinks: false,
     unsafeCache: true,
