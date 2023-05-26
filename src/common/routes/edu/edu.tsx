@@ -7,8 +7,10 @@ import './edu.scss'
 const Edu = () => {
   return (
     <div className="w-screen h-screen overflow-x-hidden">
-      <Header />
-      <div className="w-full h-full max-w-5xl m-auto page-height-container px-4 md:px-0">
+      <div className="fixed">
+        <Header />
+      </div>
+      <div className="w-full h-full max-w-5xl m-auto page-height-container px-4 md:px-0 pt-14">
         <Article title="É falso que as vacinas contra a gripe causam câncer ou outras doenças">
           <p>
             Alguns sites e perfis de redes sociais investem exaustivamente em falas mentirosas que trazem
