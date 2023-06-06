@@ -36,3 +36,8 @@ body {
   color: $text-color;
   background-color: $bg-color;
 }
+
+.MuiTabs-root {
+  position: absolute;
+  top: 4rem;
+}

@@ -6,7 +6,7 @@ import './edu.scss'
 
 const Edu = () => {
   return (
-    <div className="w-screen h-screen overflow-x-hidden">
+    <div className="w-screen min-h-screen overflow-x-hidden">
       <div className="fixed">
         <Header />
       </div>

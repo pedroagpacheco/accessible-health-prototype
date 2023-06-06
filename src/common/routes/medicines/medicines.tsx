@@ -59,7 +59,7 @@ const Medicines = () => {
   })
 
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen min-h-screen">
       <Header />
       <div className={`w-full h-full max-w-5xl m-auto flex
         justify-center items-center overflow-y-auto page-height-container`}>
